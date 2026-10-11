@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayu Jovita Widyadhari | Aspiring Data Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FDF6EE',
+                        'cream-card': '#FFF9F2',
+                        burgundy: '#6B002C',
+                        'burgundy-light': '#8C1242',
+                        'soft-pink': '#F4BACB',
+                        'warm-peach': '#FFAA85',
+                        'olive-green': '#99A034',
+                        'olive-dark': '#7A8022',
+                        'charcoal': '#2C1D24',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        handwritten: ['Caveat', 'cursive'],
+                    },
+                    boxShadow: {
+                        'retro': '4px 4px 0px 0px #6B002C',
+                        'retro-sm': '2px 2px 0px 0px #6B002C',
+                        'retro-lg': '6px 6px 0px 0px #6B002C',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Animations and Styling Details */
+        body {
+            background-color: #FDF6EE;
+            color: #2C1D24;
+        }
+
+        .bg-hero-gradient {
+            background: linear-gradient(135deg, #FFB5C5 0%, #FFA885 50%, #FDF6EE 100%);
+        }
+
+        .bg-banner-gradient {
+            background: linear-gradient(90deg, #6B002C 0%, #8C1242 100%);
+        }
+
+        .bg-marquee-gradient {
+            background: linear-gradient(90deg, #E87258 0%, #D85C77 100%);
+        }
+
+        /* Stamp/Badge CSS Effect */
+        .badge-stamp {
+            border: 2px dashed #6B002C;
+            border-radius: 50%;
+            transform: rotate(-8deg);
+        }
+
+        /* Decorative Wavy Lines and Underlines */
+        .underline-handwritten {
+            position: relative;
+        }
+        .underline-handwritten::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 3px;
+            background: #99A034;
+            border-radius: 2px;
+        }
+
+        /* Ticker Animation */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: 200%;
+            animation: marquee 22s linear infinite;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-soft-pink selection:text-burgundy overflow-x-hidden">
+
+    <div class="bg-banner-gradient text-white text-xs md:text-sm py-2 px-4 text-center font-medium tracking-wide flex justify-center items-center gap-2 border-b-2 border-burgundy">
+        <i class="fa-solid fa-sparkles text-warm-peach animate-pulse"></i>
+        <span>Get in touch for Data Analytics, Visualizations & AI Projects!</span>
+        <a href="#contact" class="underline hover:text-warm-peach ml-2 font-bold">Contact Me →</a>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b-2 border-burgundy px-4 lg:px-10 py-3 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="font-serif font-extrabold text-2xl md:text-3xl text-burgundy tracking-tight hover:opacity-80 transition-opacity">
+                Ayu Jovita<span class="text-olive-green">.</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center space-x-6 lg:space-x-8 font-semibold text-sm text-burgundy">
+                <a href="#about" class="hover:text-olive-green transition-colors">About</a>
+                <a href="#skills" class="hover:text-olive-green transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-olive-green transition-colors">Experience</a>
+                <a href="#education" class="hover:text-olive-green transition-colors">Education</a>
+                <a href="#projects" class="hover:text-olive-green transition-colors">Projects</a>
+                <a href="#achievements" class="hover:text-olive-green transition-colors">Achievements</a>
+                <a href="#contact" class="hover:text-olive-green transition-colors">Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:block">
+                <a href="#contact" class="bg-olive-green hover:bg-olive-dark text-white font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full border-2 border-burgundy shadow-retro-sm transition-all hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none inline-block">
+                    Work With Me
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-burgundy p-2 focus:outline-none" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream-card border-t-2 border-burgundy mt-3 p-5 rounded-2xl shadow-retro">
+            <div class="flex flex-col space-y-4 font-bold text-burgundy text-center">
+                <a href="#about" class="mobile-link py-1 hover:text-olive-green">About</a>
+                <a href="#skills" class="mobile-link py-1 hover:text-olive-green">Skills</a>
+                <a href="#experience" class="mobile-link py-1 hover:text-olive-green">Experience</a>
+                <a href="#education" class="mobile-link py-1 hover:text-olive-green">Education</a>
+                <a href="#projects" class="mobile-link py-1 hover:text-olive-green">Projects</a>
+                <a href="#achievements" class="mobile-link py-1 hover:text-olive-green">Achievements</a>
+                <a href="#contact" class="mobile-link py-1 hover:text-olive-green">Contact</a>
+                <a href="#contact" class="bg-olive-green text-white py-2.5 rounded-full border-2 border-burgundy shadow-retro-sm text-sm uppercase">Work With Me</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative bg-hero-gradient pt-12 pb-20 px-4 lg:px-10 border-b-2 border-burgundy overflow-hidden">
+        
+        <!-- Decorative Floating Badges/Stickers -->
+        <div class="absolute top-8 left-4 md:left-12 bg-cream p-3 rounded-2xl border-2 border-burgundy shadow-retro-sm -rotate-6 hidden sm:flex items-center space-x-2 z-10">
+            <span class="w-3 h-3 bg-red-400 rounded-full inline-block"></span>
+            <span class="font-handwritten text-lg font-bold text-burgundy">Data Analyst & AI Enthusiast ★</span>
+        </div>
+
+        <div class="absolute bottom-10 right-4 md:right-16 bg-soft-pink p-3 rounded-full border-2 border-burgundy shadow-retro rotate-12 hidden lg:block z-10">
+            <div class="w-20 h-20 rounded-full border-2 border-dashed border-burgundy flex items-center justify-center text-center p-1">
+                <span class="font-handwritten font-bold text-sm text-burgundy leading-tight">Double Degree Graduate!</span>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-20">
+            <!-- Subheading Greeting -->
+            <p class="font-handwritten text-2xl md:text-3xl text-burgundy font-bold mb-3">
+                Hey, I'm Ayu Jovita Widyadhari...
+            </p>
+
+            <!-- Main Catchy Headline -->
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-burgundy leading-tight mb-6">
+                Your data should feel <br class="hidden sm:inline"/>
+                <span class="italic text-olive-green underline-handwritten">seamless</span>, 
+                <span class="text-burgundy">insightful</span> & 
+                <span class="bg-soft-pink px-3 py-1 rounded-2xl border-2 border-burgundy shadow-retro-sm inline-block rotate-1">impactful</span>
+            </h1>
+
+            <!-- Descriptive Subtitle -->
+            <p class="max-w-2xl mx-auto text-charcoal font-medium text-base sm:text-lg mb-8 leading-relaxed">
+                Computer Science & Informatics Engineering Double-Degree Graduate skilled in turning raw data into meaningful business insights, automated workflows, and interactive AI applications.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 items-center">
+                <a href="#projects" class="bg-olive-green hover:bg-olive-dark text-white font-bold text-sm md:text-base px-8 py-3.5 rounded-full border-2 border-burgundy shadow-retro transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none">
+                    EXPLORE MY WORK
+                </a>
+                <a href="https://linkedin.com/in/ayu-jovita-widyadhari" target="_blank" rel="noopener noreferrer" class="bg-cream hover:bg-cream-card text-burgundy font-bold text-sm md:text-base px-8 py-3.5 rounded-full border-2 border-burgundy shadow-retro transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none flex items-center gap-2">
+                    <i class="fa-brands fa-linkedin text-lg"></i> LINKEDIN
+                </a>
+            </div>
+
+            <!-- Tech Pills Bar -->
+            <div class="mt-12 pt-8 border-t-2 border-burgundy/20 flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-xs md:text-sm font-bold text-burgundy">
+                <span class="opacity-75 font-serif italic text-base mr-2">Core Tech:</span>
+                <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy shadow-retro-sm">SQL</span>
+                <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy shadow-retro-sm">MySQL</span>
+                <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy shadow-retro-sm">Microsoft Excel</span>
+                <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy shadow-retro-sm">Tableau</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-marquee-gradient border-b-2 border-burgundy py-3 overflow-hidden text-white font-bold text-sm tracking-wider uppercase">
+        <div class="animate-marquee whitespace-nowrap flex space-x-8">
+            <span>★ Data Analytics ★ AI Computer Vision ★ Database Management ★ Dashboard Visualization ★ Data Processing ★ Double Degree Graduate ★</span>
+            <span>★ Data Analytics ★ AI Computer Vision ★ Database Management ★ Dashboard Visualization ★ Data Processing ★ Double Degree Graduate ★</span>
+        </div>
+    </div>
+
+    <section id="about" class="py-16 md:py-24 px-4 lg:px-10 max-w-6xl mx-auto">
+        <div class="bg-cream-card border-2 border-burgundy rounded-3xl p-6 sm:p-10 shadow-retro relative overflow-hidden">
+            
+            <!-- Corner Decorative Ribbon/Badge -->
+            <div class="absolute top-4 right-4 bg-soft-pink border-2 border-burgundy px-3 py-1 rounded-full font-handwritten text-burgundy text-xl font-bold rotate-3">
+                Hello there! ✿
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <!-- Profile Avatar Card -->
+                <div class="md:col-span-4 flex flex-col items-center">
+                    <div class="relative">
+                        <div class="w-48 h-48 md:w-56 md:h-56 bg-warm-peach rounded-2xl border-2 border-burgundy shadow-retro flex items-center justify-center p-4 text-center">
+                            <div class="w-full h-full border-2 border-dashed border-burgundy rounded-xl flex flex-col items-center justify-center bg-cream p-3">
+                                <i class="fa-solid fa-user-astronaut text-5xl text-burgundy mb-2"></i>
+                                <span class="font-serif font-bold text-burgundy text-lg">Ayu Jovita W.</span>
+                                <span class="text-xs text-charcoal/80 font-medium mt-1">Gresik, East Java, ID</span>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-3 -right-3 bg-olive-green text-white font-bold text-xs px-3 py-1 rounded-full border-2 border-burgundy shadow-retro-sm rotate-6">
+                            SAU & POLINEMA
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="md:col-span-8 space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-widest text-olive-green bg-cream px-3 py-1 rounded-full border border-burgundy inline-block">1. Professional Summary</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-burgundy">
+                        Bridging Data, Artificial Intelligence & Business Impact
+                    </h2>
+                    <p class="text-charcoal leading-relaxed font-medium text-base sm:text-lg">
+                        Computer Science and Informatics Engineering graduate from an international double-degree program at <strong class="text-burgundy underline decoration-warm-peach decoration-2">Politeknik Negeri Malang (Indonesia)</strong> and <strong class="text-burgundy underline decoration-warm-peach decoration-2">Shenyang Aerospace University (China)</strong>.
+                    </p>
+                    <p class="text-charcoal/90 leading-relaxed text-sm sm:text-base">
+                        Skilled in SQL, MySQL, Python, Microsoft Excel, and Tableau, with hands-on experience in database management, data processing, visualization, and AI-based application development through academic projects. Possess strong analytical thinking, problem-solving skills, and a passionate drive to transform complex data into actionable insights that empower strategic business decision-making.
+                    </p>
+
+                    <!-- Fast Facts Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t-2 border-burgundy/10 text-xs sm:text-sm font-semibold text-burgundy">
+                        <div class="bg-cream p-2.5 rounded-xl border border-burgundy">
+                            <i class="fa-solid fa-graduation-cap text-olive-green mr-1"></i> Double Degree
+                        </div>
+                        <div class="bg-cream p-2.5 rounded-xl border border-burgundy">
+                            <i class="fa-solid fa-earth-asia text-olive-green mr-1"></i> SAU China & POLINEMA
+                        </div>
+                        <div class="bg-cream p-2.5 rounded-xl border border-burgundy col-span-2 sm:col-span-1">
+                            <i class="fa-solid fa-award text-olive-green mr-1"></i> Multi-Competition Winner
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 px-4 lg:px-10 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-burgundy bg-soft-pink px-4 py-1.5 rounded-full border-2 border-burgundy inline-block mb-3 shadow-retro-sm">2. Core Competencies</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-burgundy">Technical Toolkit & Languages</h2>
+            <p class="font-handwritten text-2xl text-olive-green font-bold mt-1">Tools and frameworks I work with daily</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Data & Analytics Skills -->
+            <div class="bg-cream-card border-2 border-burgundy rounded-3xl p-6 shadow-retro relative">
+                <div class="w-12 h-12 bg-soft-pink rounded-2xl border-2 border-burgundy flex items-center justify-center text-burgundy text-xl mb-4 shadow-retro-sm">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <h3 class="font-serif font-bold text-xl text-burgundy mb-3">Data Analytics & BI</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy font-bold text-xs text-burgundy">SQL</span>
+                    <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy font-bold text-xs text-burgundy">MySQL</span>
+                    <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy font-bold text-xs text-burgundy">Python</span>
+                    <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy font-bold text-xs text-burgundy">Microsoft Excel</span>
+                    <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy font-bold text-xs text-burgundy">Tableau</span>
+                    <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy font-bold text-xs text-burgundy">Data Visualization</span>
+                </div>
+            </div>
+
+            <!-- Engineering & Frameworks -->
+            <div class="bg-cream-card border-2 border-burgundy rounded-3xl p-6 shadow-retro relative">
+                <div class="w-12 h-12 bg-warm-peach rounded-2xl border-2 border-burgundy flex items-center justify-center text-burgundy text-xl mb-4 shadow-retro-sm">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3 class="font-serif font-bold text-xl text-burgundy mb-3">AI & Development</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy font-bold text-xs text-burgundy">YOLOv8</span>
+                    <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy font-bold text-xs text-burgundy">ResNet18</span>
+                    <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy font-bold text-xs text-burgundy">FastAPI</span>
+                    <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy font-bold text-xs text-burgundy">Laravel</span>
+                    <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy font-bold text-xs text-burgundy">Computer Vision</span>
+                    <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy font-bold text-xs text-burgundy">Figma</span>
+                    <span class="bg-cream px-3 py-1.5 rounded-xl border border-burgundy font-bold text-xs text-burgundy">Bambu Studio</span>
+                </div>
+            </div>
+
+            <!-- Languages Proficiency -->
+            <div class="bg-cream-card border-2 border-burgundy rounded-3xl p-6 shadow-retro relative">
+                <div class="w-12 h-12 bg-olive-green text-white rounded-2xl border-2 border-burgundy flex items-center justify-center text-xl mb-4 shadow-retro-sm">
+                    <i class="fa-solid fa-language"></i>
+                </div>
+                <h3 class="font-serif font-bold text-xl text-burgundy mb-3">Language Proficiency</h3>
+                <div class="space-y-3 text-sm">
+                    <div class="flex justify-between items-center p-2 bg-cream rounded-xl border border-burgundy">
+                        <span class="font-bold text-burgundy">Indonesian</span>
+                        <span class="bg-soft-pink text-burgundy font-bold text-xs px-2 py-0.5 rounded-full border border-burgundy">Native</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2 bg-cream rounded-xl border border-burgundy">
+                        <div>
+                            <span class="font-bold text-burgundy block">English</span>
+                            <span class="text-xs text-charcoal/70">TOEIC Score: 650</span>
+                        </div>
+                        <span class="bg-warm-peach text-burgundy font-bold text-xs px-2 py-0.5 rounded-full border border-burgundy">Intermediate</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2 bg-cream rounded-xl border border-burgundy">
+                        <div>
+                            <span class="font-bold text-burgundy block">Mandarin Chinese</span>
+                            <span class="text-xs text-charcoal/70">HSK Level 3</span>
+                        </div>
+                        <span class="bg-cream-card text-burgundy font-bold text-xs px-2 py-0.5 rounded-full border border-burgundy">Elementary</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-16 px-4 lg:px-10 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-burgundy bg-warm-peach px-4 py-1.5 rounded-full border-2 border-burgundy inline-block mb-3 shadow-retro-sm">3. Hands-on Experience</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-burgundy">Work & Internship</h2>
+        </div>
+
+        <div class="bg-cream-card border-2 border-burgundy rounded-3xl p-6 sm:p-8 shadow-retro relative">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b-2 border-burgundy/10 pb-4 mb-4 gap-2">
+                <div>
+                    <span class="bg-soft-pink text-burgundy font-bold text-xs px-3 py-1 rounded-full border border-burgundy inline-block mb-2">Internship</span>
+                    <h3 class="font-serif font-extrabold text-2xl text-burgundy">3D Printing Intern</h3>
+                    <p class="text-olive-green font-bold text-sm">Shenyang Aerospace University (SAU) — Shenyang, Liaoning, China</p>
+                </div>
+                <div class="bg-cream px-4 py-2 rounded-2xl border border-burgundy text-burgundy font-bold text-sm self-start sm:self-center shadow-retro-sm">
+                    <i class="fa-regular fa-calendar mr-1"></i> March 2026
+                </div>
+            </div>
+
+            <ul class="space-y-3 text-charcoal font-medium text-sm sm:text-base leading-relaxed">
+                <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-circle-check text-olive-green mt-1"></i>
+                    <span>Utilized <strong>Figma</strong> for digital design modeling and <strong>Bambu Studio</strong> to prepare, slice, and optimize models for PLA-based 3D printing.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-circle-check text-olive-green mt-1"></i>
+                    <span>Supported model refinement, print troubleshooting, post-processing, and physical assembly for an interdisciplinary shadow-puppetry project inspired by <em>Journey to the West</em>.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-circle-check text-olive-green mt-1"></i>
+                    <span>Collaborated closely with international students to combine digital fabrication technology with traditional Chinese cultural storytelling.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="education" class="py-16 px-4 lg:px-10 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-burgundy bg-soft-pink px-4 py-1.5 rounded-full border-2 border-burgundy inline-block mb-3 shadow-retro-sm">4. Academic Background</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-burgundy">International Double-Degree</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- SAU China Card -->
+            <div class="bg-cream-card border-2 border-burgundy rounded-3xl p-6 shadow-retro flex flex-col justify-between relative">
+                <div class="absolute -top-3 right-6 bg-olive-green text-white font-bold text-xs px-3 py-1 rounded-full border border-burgundy shadow-retro-sm">
+                    Sep 2024 – Jul 2026
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl bg-warm-peach border-2 border-burgundy flex items-center justify-center font-serif font-bold text-burgundy">
+                            SAU
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-burgundy">Shenyang Aerospace University</h3>
+                            <p class="text-xs text-charcoal/70">Shenyang, Liaoning, China</p>
+                        </div>
+                    </div>
+
+                    <p class="font-bold text-burgundy text-sm mb-2">Bachelor of Engineering (B.Eng.) in Computer Science and Technology</p>
+                    
+                    <div class="bg-cream p-3 rounded-2xl border border-burgundy mb-4 text-xs space-y-1">
+                        <p class="font-bold text-burgundy">★ Academic Record:</p>
+                        <p class="text-charcoal">Final Academic Average: <strong>86.89 / 100</strong></p>
+                        <p class="text-charcoal">GPA: <strong>7.666 / 10.00</strong></p>
+                    </div>
+
+                    <p class="text-xs text-charcoal/80 mb-3">International double-degree program fully taught and conducted in English.</p>
+                </div>
+
+                <div class="pt-3 border-t border-burgundy/10">
+                    <p class="text-xs font-bold text-burgundy mb-1">Relevant Coursework:</p>
+                    <p class="text-xs text-charcoal/80 leading-relaxed">
+                        Programming, Database Systems, Artificial Intelligence, Software Engineering, Computer Networks, Information Security.
+                    </p>
+                </div>
+            </div>
+
+            <!-- POLINEMA Card -->
+            <div class="bg-cream-card border-2 border-burgundy rounded-3xl p-6 shadow-retro flex flex-col justify-between relative">
+                <div class="absolute -top-3 right-6 bg-soft-pink text-burgundy font-bold text-xs px-3 py-1 rounded-full border border-burgundy shadow-retro-sm">
+                    Aug 2022 – Sep 2026
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl bg-soft-pink border-2 border-burgundy flex items-center justify-center font-serif font-bold text-burgundy">
+                            POL
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-burgundy">Politeknik Negeri Malang</h3>
+                            <p class="text-xs text-charcoal/70">Malang, East Java, Indonesia</p>
+                        </div>
+                    </div>
+
+                    <p class="font-bold text-burgundy text-sm mb-2">Diploma IV (D4) in Informatics Engineering — Sarjana Terapan Komputer (S.Tr.Kom.)</p>
+                    
+                    <div class="bg-cream p-3 rounded-2xl border border-burgundy mb-4 text-xs space-y-1">
+                        <p class="font-bold text-burgundy">★ Academic Record:</p>
+                        <p class="text-charcoal">GPA: <strong class="text-burgundy text-sm">3.75 / 4.00</strong></p>
+                    </div>
+
+                    <p class="text-xs text-charcoal/80">Completed the first 2 years of an international double-degree program in Indonesia before continuing studies at SAU in China.</p>
+                </div>
+
+                <div class="pt-3 border-t border-burgundy/10 mt-4">
+                    <p class="text-xs font-bold text-burgundy mb-1">Program Focus:</p>
+                    <p class="text-xs text-charcoal/80">
+                        Informatics fundamentals, software engineering, database design, algorithms, and practical project implementations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 px-4 lg:px-10 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-burgundy bg-warm-peach px-4 py-1.5 rounded-full border-2 border-burgundy inline-block mb-3 shadow-retro-sm">5. Portfolio Showcase</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-burgundy">Projects & Applied AI</h2>
+            <p class="font-handwritten text-2xl text-olive-green font-bold mt-1">Real-world applications built with Data, AI & Web Tech</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- Featured Thesis Project -->
+            <div class="bg-cream-card border-2 border-burgundy rounded-3xl p-6 shadow-retro md:col-span-2 relative overflow-hidden">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                    <span class="bg-burgundy text-white font-bold text-xs px-3 py-1 rounded-full border border-burgundy">Final-Year Project / Undergraduate Thesis (2026)</span>
+                    <span class="bg-warm-peach text-burgundy font-bold text-xs px-3 py-1 rounded-full border border-burgundy">AI + Medical Web App</span>
+                </div>
+
+                <h3 class="font-serif font-extrabold text-2xl sm:text-3xl text-burgundy mb-3">
+                    AI-Based Postoperative Sutured-Wound Detection and Monitoring System
+                </h3>
+
+                <p class="text-charcoal text-sm sm:text-base leading-relaxed mb-4">
+                    Developed an end-to-end web-based AI application designed to detect, classify, and continuously monitor postoperative sutured-wound conditions using computer vision and deep learning models.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 my-4">
+                    <div class="bg-cream p-4 rounded-2xl border border-burgundy space-y-2">
+                        <h4 class="font-bold text-burgundy text-sm"><i class="fa-solid fa-brain text-olive-green mr-1"></i> AI & Computer Vision Architecture</h4>
+                        <p class="text-xs text-charcoal/80 leading-relaxed">
+                            Applied <strong>YOLOv8</strong> for real-time wound localization and <strong>ResNet18</strong> for classification into clean, clean-contaminated, contaminated, and infected categories.
+                        </p>
+                    </div>
+                    <div class="bg-cream p-4 rounded-2xl border border-burgundy space-y-2">
+                        <h4 class="font-bold text-burgundy text-sm"><i class="fa-solid fa-cubes text-olive-green mr-1"></i> Full-Stack & System Integration</h4>
+                        <p class="text-xs text-charcoal/80 leading-relaxed">
+                            Integrated deep learning inference models using <strong>FastAPI</strong> with <strong>Laravel</strong> and <strong>MySQL</strong> to render wound-history tracking, data visualization dashboards, automated PDF reports, and appointment scheduling.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="bg-cream px-3 py-1 rounded-lg border border-burgundy font-bold text-xs text-burgundy">YOLOv8</span>
+                    <span class="bg-cream px-3 py-1 rounded-lg border border-burgundy font-bold text-xs text-burgundy">ResNet18</span>
+                    <span class="bg-cream px-3 py-1 rounded-lg border border-burgundy font-bold text-xs text-burgundy">Laravel</span>
+                    <span class="bg-cream px-3 py-1 rounded-lg border border-burgundy font-bold text-xs text-burgundy">MySQL</span>
+                    <span class="bg-cream px-3 py-1 rounded-lg border border-burgundy font-bold text-xs text-burgundy">FastAPI</span>
+                    <span class="bg-cream px-3 py-1 rounded-lg border border-burgundy font-bold text-xs text-burgundy">PDF Generation</span>
+                </div>
+            </div>
+
+            <!-- SENSEAID Smart Glasses -->
+            <div class="bg-cream-card border-2 border-burgundy rounded-3xl p-6 shadow-retro flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-soft-pink text-burgundy font-bold text-xs px-3 py-1 rounded-full border border-burgundy">Innovation Competition (2025)</span>
+                        <span class="font-handwritten text-lg font-bold text-burgundy">3rd Place Winner 🏆</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-burgundy mb-2">SENSEAID: AI-Powered Smart Glasses</h3>
+                    <p class="text-charcoal text-xs sm:text-sm leading-relaxed mb-4">
+                        Contributed to an AI-powered smart-glasses concept designed to assist visually impaired individuals in recognizing surroundings and receiving real-time audio and vibration guidance.
+                    </p>
+                    <div class="bg-cream p-3 rounded-2xl border border-burgundy text-xs mb-4">
+                        <strong class="text-burgundy block mb-1">Award Achievement:</strong>
+                        <p class="text-charcoal">Third Place — 4th Liaoning International Student Innovation Competition, China (2025).</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-cream px-2.5 py-1 rounded-lg border border-burgundy font-bold text-xs text-burgundy">AI Guidance</span>
+                    <span class="bg-cream px-2.5 py-1 rounded-lg border border-burgundy font-bold text-xs text-burgundy">Assistive Tech</span>
+                </div>
+            </div>
+
+            <!-- Fall Detection System -->
+            <div class="bg-cream-card border-2 border-burgundy rounded-3xl p-6 shadow-retro flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-soft-pink text-burgundy font-bold text-xs px-3 py-1 rounded-full border border-burgundy">Innovation Competition (2025)</span>
+                        <span class="font-handwritten text-lg font-bold text-burgundy">3rd Place Winner 🏆</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-burgundy mb-2">AI for Elderly: Fall Detection System</h3>
+                    <p class="text-charcoal text-xs sm:text-sm leading-relaxed mb-4">
+                        Contributed to a camera-based elderly fall-detection solution designed to accurately identify accidental falls in real-time and send instant notifications to caregivers or emergency monitoring systems.
+                    </p>
+                    <div class="bg-cream p-3 rounded-2xl border border-burgundy text-xs mb-4">
+                        <strong class="text-burgundy block mb-1">Award Achievement:</strong>
+                        <p class="text-charcoal">Third Place — Liaoning Province Undergraduate Computer Design Competition (2025).</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-cream px-2.5 py-1 rounded-lg border border-burgundy font-bold text-xs text-burgundy">Computer Vision</span>
+                    <span class="bg-cream px-2.5 py-1 rounded-lg border border-burgundy font-bold text-xs text-burgundy">Elderly Safety</span>
+                </div>
+            </div>
+
+            <!-- RWis Community Management App -->
+            <div class="bg-cream-card border-2 border-burgundy rounded-3xl p-6 shadow-retro md:col-span-2">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="bg-warm-peach text-burgundy font-bold text-xs px-3 py-1 rounded-full border border-burgundy">Community Service Web App (2024)</span>
+                </div>
+                <h3 class="font-serif font-bold text-xl text-burgundy mb-2">RWis Community Management Application</h3>
+                <p class="text-charcoal text-xs sm:text-sm leading-relaxed mb-3">
+                    Contributed to the development of a web-based community management application integrated with a WhatsApp chatbot to facilitate seamless information delivery, citizen service requests, and community management.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-cream px-2.5 py-1 rounded-lg border border-burgundy font-bold text-xs text-burgundy">Web Development</span>
+                    <span class="bg-cream px-2.5 py-1 rounded-lg border border-burgundy font-bold text-xs text-burgundy">WhatsApp Chatbot</span>
+                    <span class="bg-cream px-2.5 py-1 rounded-lg border border-burgundy font-bold text-xs text-burgundy">Database Management</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="achievements" class="py-16 px-4 lg:px-10 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-burgundy bg-soft-pink px-4 py-1.5 rounded-full border-2 border-burgundy inline-block mb-3 shadow-retro-sm">6. Credentials & Honors</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-burgundy">Awards & Certifications</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- Awards Column -->
+            <div class="bg-cream-card border-2 border-burgundy rounded-3xl p-6 sm:p-8 shadow-retro">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-12 h-12 bg-warm-peach rounded-2xl border-2 border-burgundy flex items-center justify-center text-burgundy text-xl shadow-retro-sm">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-2xl text-burgundy">Honors & Awards</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="p-4 bg-cream rounded-2xl border border-burgundy">
+                        <div class="flex justify-between items-start gap-2">
+                            <h4 class="font-bold text-burgundy text-sm">Third Place — 4th Liaoning International Student Innovation Competition</h4>
+                            <span class="bg-soft-pink text-burgundy text-xs font-bold px-2 py-0.5 rounded border border-burgundy">2025</span>
+                        </div>
+                        <p class="text-xs text-charcoal/80 mt-1">China — Awarded for the <em>SENSEAID AI-powered smart-glasses project</em>.</p>
+                    </div>
+
+                    <div class="p-4 bg-cream rounded-2xl border border-burgundy">
+                        <div class="flex justify-between items-start gap-2">
+                            <h4 class="font-bold text-burgundy text-sm">Third Place — Liaoning Province Undergraduate Computer Design Competition</h4>
+                            <span class="bg-soft-pink text-burgundy text-xs font-bold px-2 py-0.5 rounded border border-burgundy">2025</span>
+                        </div>
+                        <p class="text-xs text-charcoal/80 mt-1">China — Awarded for the <em>AI-based elderly fall-detection system</em>.</p>
+                    </div>
+
+                    <div class="p-4 bg-cream rounded-2xl border border-burgundy">
+                        <div class="flex justify-between items-start gap-2">
+                            <h4 class="font-bold text-burgundy text-sm">Outstanding Award — 3rd Liaoning Province International Student Innovation Competition</h4>
+                            <span class="bg-soft-pink text-burgundy text-xs font-bold px-2 py-0.5 rounded border border-burgundy">2024</span>
+                        </div>
+                        <p class="text-xs text-charcoal/80 mt-1">For <em>CitizenSide — Government Service & Big Data Platform</em> (Liaoning Provincial Dept. of Education, Cert No: 20242281180009).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Column -->
+            <div class="bg-cream-card border-2 border-burgundy rounded-3xl p-6 sm:p-8 shadow-retro">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-12 h-12 bg-olive-green text-white rounded-2xl border-2 border-burgundy flex items-center justify-center text-xl shadow-retro-sm">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-2xl text-burgundy">Certifications & Licenses</h3>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="p-3 bg-cream rounded-2xl border border-burgundy flex items-center justify-between">
+                        <div>
+                            <p class="font-bold text-burgundy text-sm">SQL for Data Analysis</p>
+                            <p class="text-xs text-charcoal/70">MySkill — Issued October 2026</p>
+                        </div>
+                        <i class="fa-solid fa-award text-olive-green text-lg"></i>
+                    </div>
+
+                    <div class="p-3 bg-cream rounded-2xl border border-burgundy flex items-center justify-between">
+                        <div>
+                            <p class="font-bold text-burgundy text-sm">Microsoft Excel: Data Manipulation & Functions</p>
+                            <p class="text-xs text-charcoal/70">MySkill — Issued October 2026</p>
+                        </div>
+                        <i class="fa-solid fa-file-excel text-olive-green text-lg"></i>
+                    </div>
+
+                    <div class="p-3 bg-cream rounded-2xl border border-burgundy flex items-center justify-between">
+                        <div>
+                            <p class="font-bold text-burgundy text-sm">IC3 Digital Literacy Certification (GS6 Level 1)</p>
+                            <p class="text-xs text-charcoal/70">Certiport — Issued July 2026</p>
+                        </div>
+                        <i class="fa-solid fa-laptop-code text-olive-green text-lg"></i>
+                    </div>
+
+                    <div class="p-3 bg-cream rounded-2xl border border-burgundy flex items-center justify-between">
+                        <div>
+                            <p class="font-bold text-burgundy text-sm">TOEIC Listening & Reading (Score: 650)</p>
+                            <p class="text-xs text-charcoal/70">ETS — Issued May 2026</p>
+                        </div>
+                        <i class="fa-solid fa-language text-olive-green text-lg"></i>
+                    </div>
+
+                    <div class="p-3 bg-cream rounded-2xl border border-burgundy flex items-center justify-between">
+                        <div>
+                            <p class="font-bold text-burgundy text-sm">HSK Level 3 (Mandarin Chinese)</p>
+                            <p class="text-xs text-charcoal/70">Shenyang Aerospace University</p>
+                        </div>
+                        <i class="fa-solid fa-earth-asia text-olive-green text-lg"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-burgundy text-cream pt-16 pb-12 px-4 lg:px-10 border-t-2 border-burgundy relative">
+        <div class="max-w-5xl mx-auto text-center">
+            
+            <span class="bg-warm-peach text-burgundy font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-cream inline-block mb-4 shadow-retro-sm">
+                Get In Touch
+            </span>
+
+            <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-white mb-4">
+                Let's turn your data into insights!
+            </h2>
+            <p class="max-w-xl mx-auto text-cream/80 text-sm sm:text-base mb-8">
+                I am open to full-time Data Analyst roles, freelance projects, and collaborations in AI & Data Engineering.
+            </p>
+
+            <!-- Contact Card Box -->
+            <div class="bg-burgundy-light border-2 border-cream/30 rounded-3xl p-6 sm:p-8 max-w-2xl mx-auto shadow-retro text-left mb-10">
+                <div class="space-y-4 text-sm sm:text-base">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-warm-peach text-burgundy flex items-center justify-center font-bold text-lg shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-cream/70 uppercase font-bold tracking-wider">Location</p>
+                            <p class="font-semibold text-white">Jl. Permata Natura No. 19, Banjarsari, Manyar, Gresik, East Java, Indonesia</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-soft-pink text-burgundy flex items-center justify-center font-bold text-lg shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-cream/70 uppercase font-bold tracking-wider">Phone / WhatsApp</p>
+                            <a href="tel:082225281953" class="font-semibold text-white hover:text-warm-peach transition-colors">082225281953</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-olive-green text-white flex items-center justify-center font-bold text-lg shrink-0">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-cream/70 uppercase font-bold tracking-wider">LinkedIn Profile</p>
+                            <a href="https://linkedin.com/in/ayu-jovita-widyadhari" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:text-warm-peach underline transition-colors">
+                                linkedin.com/in/ayu-jovita-widyadhari
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="border-t border-cream/20 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-cream/60 gap-3">
+                <p>© 2026 Ayu Jovita Widyadhari. All rights reserved.</p>
+                <p class="font-handwritten text-lg text-warm-peach">Crafted with care & retro aesthetics ✨</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
